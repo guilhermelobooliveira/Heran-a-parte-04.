@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package exercício3;
+
+/**
+ *
+ * @author Marino
+ */
+public class Empregado extends Pessoa {
+    private int CodigoSetor;
+    private double SalarioBase;
+    private double imposto;
+
+    public int getCodigoSetor() {
+        return CodigoSetor;
+    }
+
+    public void setCodigoSetor(int CodigoSetor) {
+        this.CodigoSetor = CodigoSetor;
+    }
+
+    public double getSalarioBase() {
+        return SalarioBase;
+    }
+
+    public void setSalarioBase(double SalarioBase) {
+        this.SalarioBase = SalarioBase;
+    }
+
+    public double getImposto() {
+        return imposto;
+    }
+
+    public void setImposto(double imposto) {
+        this.imposto = imposto;
+    }
+    
+    public double getcalcularSalario(){
+        return (this.getSalarioBase() - (this.getSalarioBase() * this.getImposto()));
+    }     
+}
